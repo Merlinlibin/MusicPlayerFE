@@ -93,81 +93,83 @@ function Player({ song, songs, setplayer }) {
 
   return (
     <div className="song-popup hide">
-      <a className="closeButton" onClick={closeplayer}>
-        x
-      </a>
-      {/* <!-- Song --> */}
-      <div className="imgcontainer">
-        <img src={currentSong.imageUrl} alt="Album art" />
-      </div>
-      <h2 id="title">{currentSong.songname}</h2>
-      <h3 id="artist">{currentSong.artistname}</h3>
-      <audio src={currentSong.songUrl} autoPlay ref={audioRef}></audio>
-      {/* <!-- Progress bar --> */}
-      <div className="progress-container" id="progress-container">
-        <input
-          type="range"
-          className="progress"
-          value={currentTime}
-          max={duration}
-          onChange={(e) => handleSeek(e.target.value)}
-        />
-        <div className="duration-wrapper">
-          <span id="current-time">
-            {`${Math.floor(currentTime / 60)
-              .toString()
-              .padStart(2, "0")}:${Math.floor(currentTime % 60)
-              .toString()
-              .padStart(2, "0")}`}
-          </span>
-          <span id="duration">{`${Math.floor(duration / 60)
-            .toString()
-            .padStart(2, "0")}:${Math.floor(duration % 60)
-            .toString()
-            .padStart(2, "0")}`}</span>
+      <div>
+        <a className="closeButton" onClick={closeplayer}>
+          x
+        </a>
+        {/* <!-- Song --> */}
+        <div className="imgcontainer">
+          <img src={currentSong.imageUrl} alt="Album art" />
         </div>
-      </div>
-      {/* <!-- Controls --> */}
-      <div className="player-controls">
-        <i
-          className="fas fa-backward"
-          onClick={playPreviousTrack}
-          id="prev"
-          title="Previous"></i>
-        <i
-          className={
-            isPlaying
-              ? "fas fa-play-circle main-button"
-              : "fas fa-pause-circle main-button"
-          }
-          id="play"
-          title="Play"
-          onClick={playPauseHandler}></i>
-        <i
-          className="fas fa-forward"
-          onClick={playNextTrack}
-          id="next"
-          title="Next"></i>
-      </div>
-      {/* <!-- Volume Controls --> */}
-      <div className="volume-controls">
-        <i
-          className={
-            isMute
-              ? "fas fa-volume-mute volume-btn "
-              : "fas fa-volume-up volume-btn"
-          }
-          title="Mute"
-          onClick={handleMute}></i>
+        <h2 id="title">{currentSong.songname}</h2>
+        <h3 id="artist">{currentSong.artistname}</h3>
+        <audio src={currentSong.songUrl} autoPlay ref={audioRef}></audio>
+        {/* <!-- Progress bar --> */}
+        <div className="progress-container" id="progress-container">
+          <input
+            type="range"
+            className="progress"
+            value={currentTime}
+            max={duration}
+            onChange={(e) => handleSeek(e.target.value)}
+          />
+          <div className="duration-wrapper">
+            <span id="current-time">
+              {`${Math.floor(currentTime / 60)
+                .toString()
+                .padStart(2, "0")}:${Math.floor(currentTime % 60)
+                .toString()
+                .padStart(2, "0")}`}
+            </span>
+            <span id="duration">{`${Math.floor(duration / 60)
+              .toString()
+              .padStart(2, "0")}:${Math.floor(duration % 60)
+              .toString()
+              .padStart(2, "0")}`}</span>
+          </div>
+        </div>
+        {/* <!-- Controls --> */}
+        <div className="player-controls">
+          <i
+            className="fas fa-backward"
+            onClick={playPreviousTrack}
+            id="prev"
+            title="Previous"></i>
+          <i
+            className={
+              isPlaying
+                ? "fas fa-play-circle main-button"
+                : "fas fa-pause-circle main-button"
+            }
+            id="play"
+            title="Play"
+            onClick={playPauseHandler}></i>
+          <i
+            className="fas fa-forward"
+            onClick={playNextTrack}
+            id="next"
+            title="Next"></i>
+        </div>
+        {/* <!-- Volume Controls --> */}
+        <div className="volume-controls">
+          <i
+            className={
+              isMute
+                ? "fas fa-volume-mute volume-btn "
+                : "fas fa-volume-up volume-btn"
+            }
+            title="Mute"
+            onClick={handleMute}></i>
 
-        <input
-          type="range"
-          min="0"
-          max="1"
-          step="0.1"
-          value={volume}
-          onChange={handleVolumeChange}
-        />
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value={volume}
+            onChange={handleVolumeChange}
+          />
+        </div>
       </div>
     </div>
   );

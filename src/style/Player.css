@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  height: 80vh;
+  height: 70vh;
   background: white;
   box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -12,6 +12,8 @@
   align-items: center;
   justify-content: center;
   background-color: rgb(255, 255, 255);
+  display: grid;
+  place-items:center;
 }
 .closeButton {
   border-radius: 50%;
@@ -29,7 +31,7 @@
   cursor: pointer;
   text-decoration: none;
   color: #0b0807;
-  border:1px solid rgb(130, 126, 126);
+  border: 1px solid rgb(130, 126, 126);
 }
 .imgcontainer {
   height: 17rem;
@@ -166,5 +168,9 @@ h3 {
   }
   .player-controls {
     gap: 3.4rem;
+  }
+  .song-popup {
+    width: 80%;
+    height: 50vh;
   }
 }
