@@ -1,0 +1,64 @@
+#mySidenav #blog,
+#mySidenav #about {
+  position: absolute;
+  left: -130px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 200px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  text-align: end;
+  z-index: 1;
+}
+
+#mySidenav #blog:hover,
+#mySidenav #about:hover {
+  left: 0;
+  width: 20%;
+  display: block;
+}
+@media screen and (width<370px) {
+  #mySidenav #blog:hover,
+  #mySidenav #about:hover {
+    left: 0;
+    width: 60%;
+    display: block;
+  }
+}
+@media screen and (width<970px) and (min-width: 371px) {
+  #mySidenav #blog:hover,
+  #mySidenav #about:hover {
+    left: 0;
+    width: 50%;
+    display: block;
+  }
+}
+
+#about {
+  top: 100px;
+  background-color: #04aa6d;
+}
+
+#blog {
+  top: 160px;
+  background-color: #2196f3;
+}
+
+.search {
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+}
+.searchButton {
+  height: 50px;
+  border-radius: 150px;
+  width: 95px;
+  border: none;
+  background-color: rgb(236, 236, 237);
+}
+.searchButton:hover,
+.search:hover {
+  border: 5px solid lightskyblue;
+}

@@ -1,0 +1,46 @@
+.btn-circle.btn-sm {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.thumbnail {
+  width: 75px;
+  height: 75px;
+  padding: 5px;
+  object-fit: cover;
+}
+.heading {
+  text-align: start;
+  text-decoration: underline;
+  font-size: 12px;
+}
+.artist {
+  text-align: start;
+}
+.likeButtonmob {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  color: red;
+  font-size: 25px;
+  cursor: pointer;
+}
+.playlistButtonmob {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  color: rgb(114, 104, 104);
+  font-size: 25px;
+  cursor: pointer;
+}
+.buttondiv {
+  display: flex;
+  flex-direction: column;
+}
