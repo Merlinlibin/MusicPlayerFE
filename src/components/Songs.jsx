@@ -7,7 +7,7 @@ import axios from "axios";
 import Player from "./Player";
 
 function Songs() {
-  const getSongUrl = "http://localhost:3000/api/songs/";
+  const getSongUrl = "https://musicplayerbackend.onrender.com/api/songs/";
   const [songs, setSongs] = useState([]);
   const [player, setplayer] = useState(false);
   const [childData, setChildData] = useState(null);
