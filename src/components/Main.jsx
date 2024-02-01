@@ -24,7 +24,7 @@ function Main() {
         </div>
         <Songs />
       </div>
-      <Progress />
+      
     </Router>
   );
 }
