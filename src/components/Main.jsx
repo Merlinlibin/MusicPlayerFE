@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../style/Main.css";
 import Songs from "./Songs";
 import { Link, BrowserRouter as Router } from "react-router-dom";
-import Progress from "./progress";
 
 function Main() {
   return (
